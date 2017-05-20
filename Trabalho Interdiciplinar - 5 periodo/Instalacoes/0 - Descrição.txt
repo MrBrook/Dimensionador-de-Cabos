@@ -1,0 +1,6 @@
+1 - seção mínima;
+2 - capacidade de condução de corrente;
+3 - queda de tensão;
+4 - proteção contra sobrecargas;
+5 - proteção contra curto-circuito;
+6 - proteção contra contatos indiretos
