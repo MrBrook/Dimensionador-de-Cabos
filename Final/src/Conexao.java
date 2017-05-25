@@ -27,7 +27,7 @@ public class Conexao {
             if(conexao != null){
                 System.out.println("Conectou");
 
-                Banco banco = new Banco();
+              /*  Banco banco = new Banco();
 
                 Scanner ler = new Scanner(System.in);
 
@@ -43,21 +43,21 @@ public class Conexao {
                 int nCabos = 2;
 
 
-              /*  for(Metodos metodos : banco.buscarTodos(conexao)){
+                for(Metodos metodos : banco.buscarTodos(conexao)){
                     System.out.println("idDimensao: "+metodos.getIdDimensao() +" Diametro: "+metodos.getDiametro());
-                }*/
+
 
                 System.out.println("Buscando por Id....");
                 Metodos metodos = banco.buscaPorId(2.5,conexao,1,"dimensao","diametro");
 
                 int id = metodos.getIdDimensao();
-               // System.out.println("Diametro: "+id);
+                 System.out.println("Diametro: "+id);
 
                 Metodos metodos1 = banco.buscaPorId(id,conexao,2,met,"idB1");
 
                 System.out.println("Corrente: "+metodos1.getCampo2());
 
-                System.out.println("Corrente Ib: "+iB);
+                System.out.println("Corrente Ib: "+iB);*/
             }
         }catch (Exception e){
             System.out.print(e);

@@ -8,6 +8,7 @@ import java.sql.SQLException;
  * Created by lucas on 28/04/17.
  */
 public class ConConexao {
+
     public static Connection getConnection(){
         Connection connection = null;
         try{
@@ -22,8 +23,4 @@ public class ConConexao {
 
         return connection;
     }
-   /* public static ConConexao fimConexao(){
-
-    }*/
-
 }
