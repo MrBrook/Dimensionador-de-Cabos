@@ -16,27 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `K2`
+-- Table structure for table `RRCabos`
 --
 
-DROP TABLE IF EXISTS `K2`;
+DROP TABLE IF EXISTS `RRCabos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `K2` (
-  `idResTermica` float NOT NULL,
-  `fatorCorrecao` float DEFAULT NULL,
-  PRIMARY KEY (`idResTermica`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `RRCabos` (
+  `idResistenciaReatancia` int(11) NOT NULL AUTO_INCREMENT,
+  `idCabo` int(11) NOT NULL,
+  `rcc` float DEFAULT NULL,
+  `rca` float DEFAULT NULL,
+  `xl` float DEFAULT NULL,
+  PRIMARY KEY (`idResistenciaReatancia`),
+  KEY `fk_ResistenciaReatancia_Cabos1_idx` (`idCabo`),
+  CONSTRAINT `fk_ResistenciaReatancia_Cabos1` FOREIGN KEY (`idCabo`) REFERENCES `Cabos` (`idCabo`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `K2`
+-- Dumping data for table `RRCabos`
 --
 
-LOCK TABLES `K2` WRITE;
-/*!40000 ALTER TABLE `K2` DISABLE KEYS */;
-INSERT INTO `K2` VALUES (1,1.18),(1.5,1.1),(2,1.05),(3,0.96);
-/*!40000 ALTER TABLE `K2` ENABLE KEYS */;
+LOCK TABLES `RRCabos` WRITE;
+/*!40000 ALTER TABLE `RRCabos` DISABLE KEYS */;
+INSERT INTO `RRCabos` VALUES (1,4,12.5,14.48,0.16),(2,5,7.41,8.87,0.15),(3,6,4.61,5.52,0.14),(4,7,3.08,3.69,0.13),(5,8,1.83,2.19,0.13),(6,9,1.15,1.38,0.12),(7,10,0.73,0.87,0.12),(8,11,0.52,0.63,0.11),(9,12,0.39,0.47,0.11),(10,13,0.27,0.32,0.1),(11,14,0.19,0.23,0.1),(12,15,0.15,0.19,0.1),(13,16,0.12,0.15,0.1),(14,17,0.099,0.12,0.094),(15,18,0.075,0.094,0.098),(16,19,0.06,0.078,0.097),(17,20,0.047,0.063,0.096),(18,21,0.037,0.052,0.095),(19,22,0.028,0.043,0.093),(20,23,0.022,0.037,0.089),(21,24,0.018,0.033,0.088);
+/*!40000 ALTER TABLE `RRCabos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

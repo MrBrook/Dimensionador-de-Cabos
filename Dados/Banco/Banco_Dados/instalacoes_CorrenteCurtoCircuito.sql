@@ -16,27 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `K2`
+-- Table structure for table `CorrenteCurtoCircuito`
 --
 
-DROP TABLE IF EXISTS `K2`;
+DROP TABLE IF EXISTS `CorrenteCurtoCircuito`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `K2` (
-  `idResTermica` float NOT NULL,
-  `fatorCorrecao` float DEFAULT NULL,
-  PRIMARY KEY (`idResTermica`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `CorrenteCurtoCircuito` (
+  `idCorrenteCurtoCircuito` int(11) NOT NULL AUTO_INCREMENT,
+  `potencia` float DEFAULT NULL,
+  `correnteCurto1` float DEFAULT NULL,
+  `correnteCurto2` float DEFAULT NULL,
+  PRIMARY KEY (`idCorrenteCurtoCircuito`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `K2`
+-- Dumping data for table `CorrenteCurtoCircuito`
 --
 
-LOCK TABLES `K2` WRITE;
-/*!40000 ALTER TABLE `K2` DISABLE KEYS */;
-INSERT INTO `K2` VALUES (1,1.18),(1.5,1.1),(2,1.05),(3,0.96);
-/*!40000 ALTER TABLE `K2` ENABLE KEYS */;
+LOCK TABLES `CorrenteCurtoCircuito` WRITE;
+/*!40000 ALTER TABLE `CorrenteCurtoCircuito` DISABLE KEYS */;
+INSERT INTO `CorrenteCurtoCircuito` VALUES (1,15,0.8,0.4),(2,16,0.8,0.5),(3,25,1.2,0.7),(4,30,1.6,0.8),(5,45,2.4,1.2),(6,50,2.5,1.5),(7,63,3.1,1.8),(8,75,3.8,2.2),(9,80,4,2.3),(10,100,5,3),(11,112.5,5.6,3.2),(12,150,7.6,4.4),(13,160,8,4.7),(14,200,10,6),(15,225,11,6.5),(16,250,12,7),(17,300,15,9),(18,315,16,9),(19,400,20,12),(20,500,25,14),(21,630,31,18),(22,750,37,22),(23,800,40,23),(24,1000,50,28);
+/*!40000 ALTER TABLE `CorrenteCurtoCircuito` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

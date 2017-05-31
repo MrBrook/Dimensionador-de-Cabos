@@ -16,27 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `K2`
+-- Table structure for table `Tensao`
 --
 
-DROP TABLE IF EXISTS `K2`;
+DROP TABLE IF EXISTS `Tensao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `K2` (
-  `idResTermica` float NOT NULL,
-  `fatorCorrecao` float DEFAULT NULL,
-  PRIMARY KEY (`idResTermica`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `Tensao` (
+  `idTensao` int(11) NOT NULL AUTO_INCREMENT,
+  `tensao` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`idTensao`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `K2`
+-- Dumping data for table `Tensao`
 --
 
-LOCK TABLES `K2` WRITE;
-/*!40000 ALTER TABLE `K2` DISABLE KEYS */;
-INSERT INTO `K2` VALUES (1,1.18),(1.5,1.1),(2,1.05),(3,0.96);
-/*!40000 ALTER TABLE `K2` ENABLE KEYS */;
+LOCK TABLES `Tensao` WRITE;
+/*!40000 ALTER TABLE `Tensao` DISABLE KEYS */;
+INSERT INTO `Tensao` VALUES (1,'127/220V'),(2,'220/380V');
+/*!40000 ALTER TABLE `Tensao` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

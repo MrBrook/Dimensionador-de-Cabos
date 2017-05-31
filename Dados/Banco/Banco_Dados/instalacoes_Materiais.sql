@@ -35,7 +35,7 @@ CREATE TABLE `Materiais` (
 
 LOCK TABLES `Materiais` WRITE;
 /*!40000 ALTER TABLE `Materiais` DISABLE KEYS */;
-INSERT INTO `Materiais` VALUES (1,'Cobre'),(2,'Alumínio'),(3,'PVC'),(4,'EPR ou XLPE');
+INSERT INTO `Materiais` VALUES (1,'Cobre'),(2,'Alumínio'),(3,'PVC'),(4,'EPR ou XLPE'),(5,'Dijuntores');
 /*!40000 ALTER TABLE `Materiais` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-22 13:15:56
+-- Dump completed on 2017-05-30 23:05:31

@@ -1,4 +1,0 @@
-SELECT A.descricao "Material",
-       B.diametro "Diametro"
-  FROM Materiais A
- INNER JOIN Cabos B ON  B.idCabo = A.idMaterial;
