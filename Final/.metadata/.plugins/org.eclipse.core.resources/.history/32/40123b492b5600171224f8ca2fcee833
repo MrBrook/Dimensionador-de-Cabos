@@ -1,0 +1,241 @@
+package br.com.GUI;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JTabbedPane;
+import javax.swing.JTable;
+import javax.swing.JMenuItem;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.JScrollPane;
+import java.awt.Choice;
+import java.awt.Label;
+import javax.swing.JCheckBox;
+import java.awt.Button;
+
+public class PrincipalTela extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTable table;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					PrincipalTela frame = new PrincipalTela();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public PrincipalTela() {
+		setTitle("Cable Sizer");
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1000, 538);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenu mnNew = new JMenu("New");
+		menuBar.add(mnNew);
+		
+		JMenu mnNewMenu = new JMenu("Project");
+		mnNew.add(mnNewMenu);
+		
+		JMenuItem mntmCircuit = new JMenuItem("Circuit");
+		mnNewMenu.add(mntmCircuit);
+		
+		JMenuItem mntmExit = new JMenuItem("Exit");
+		mnNew.add(mntmExit);
+		
+		JMenu mnToos = new JMenu("Toos");
+		menuBar.add(mnToos);
+		
+		JMenuItem mntmRefactor = new JMenuItem("Report PDF");
+		mnToos.add(mntmRefactor);
+		
+		JMenu mnHelp = new JMenu("Help");
+		menuBar.add(mnHelp);
+		
+		JMenuItem mntmAbout = new JMenuItem("About");
+		mnHelp.add(mntmAbout);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		JPanel panel = new JPanel();
+		contentPane.add(panel, BorderLayout.CENTER);
+		panel.setLayout(null);
+		
+		JPanel panel_Configuration = new JPanel();
+		panel_Configuration.setBounds(10, 11, 374, 356);
+		panel.add(panel_Configuration);
+		panel_Configuration.setLayout(new BorderLayout(0, 0));
+		
+		JTabbedPane Abas = new JTabbedPane(JTabbedPane.TOP);
+		panel_Configuration.add(Abas, BorderLayout.CENTER);
+		
+		JPanel panel_4 = new JPanel();
+		Abas.addTab("Current capacity", null, panel_4, null);
+		panel_4.setLayout(null);
+		
+		Choice cK1 = new Choice();
+		cK1.setBounds(218, 47, 83, 20);
+		cK1.add("Environment");
+		cK1.add("Ground");
+		panel_4.add(cK1);
+		
+		Choice choice_1 = new Choice();
+		choice_1.setBounds(98, 47, 36, 20);
+		panel_4.add(choice_1);
+		
+		Label label = new Label("Temperature correction factor");
+		label.setBounds(96, 10, 179, 22);
+		panel_4.add(label);
+		
+		JLabel label_1 = new JLabel("________________________________________");
+		label_1.setBounds(39, 82, 317, 14);
+		panel_4.add(label_1);
+		
+		Label label_2 = new Label("Correction factor for soil thermal resistivity");
+		label_2.setBounds(49, 102, 252, 22);
+		panel_4.add(label_2);
+		
+		JCheckBox chckbxOk = new JCheckBox("OK");
+		chckbxOk.setBounds(10, 129, 49, 23);
+		panel_4.add(chckbxOk);
+		
+		Label label_3 = new Label("Thermal Resistivity:");
+		label_3.setBounds(97, 130, 107, 22);
+		panel_4.add(label_3);
+		
+		Choice choice = new Choice();
+		choice.setBounds(210, 130, 49, 20);
+		panel_4.add(choice);
+		
+		JLabel label_4 = new JLabel("________________________________________");
+		label_4.setBounds(39, 159, 317, 14);
+		panel_4.add(label_4);
+		
+		Label label_5 = new Label("Correction factor for circuit grouping");
+		label_5.setBounds(49, 179, 224, 22);
+		panel_4.add(label_5);
+		
+		Label label_6 = new Label("Temperature:");
+		label_6.setBounds(10, 47, 78, 22);
+		panel_4.add(label_6);
+		
+		Label label_7 = new Label("For:");
+		label_7.setBounds(168, 45, 36, 22);
+		panel_4.add(label_7);
+		
+		Label label_8 = new Label("Cable arrangement:");
+		label_8.setBounds(10, 220, 107, 22);
+		panel_4.add(label_8);
+		
+		Choice choice_2 = new Choice();
+		choice_2.setBounds(125, 222, 208, 20);
+		choice_2.add("Cable harness outdoor Or on surface: cable In closed conduits");
+		choice_2.add("Single layer on Wall, floor or Unperforated tray or shelf");
+		panel_4.add(choice_2);
+		
+		Label label_11 = new Label("Number of Circuits:");
+		label_11.setBounds(10, 260, 99, 22);
+		panel_4.add(label_11);
+		
+		Choice choice_3 = new Choice();
+		choice_3.setBounds(125, 262, 49, 20);
+		panel_4.add(choice_3);
+		
+		Button button_1 = new Button("Next");
+		button_1.setBounds(286, 296, 70, 22);
+		panel_4.add(button_1);
+		
+		JPanel panel_5 = new JPanel();
+		Abas.addTab("Tension Fall", null, panel_5, null);
+		
+		JPanel panel_6 = new JPanel();
+		Abas.addTab("New tab", null, panel_6, null);
+		
+		JPanel panel_7 = new JPanel();
+		Abas.addTab("New tab", null, panel_7, null);
+		
+		JPanel panel_Information = new JPanel();
+		panel_Information.setBounds(10, 378, 371, 89);
+		panel.add(panel_Information);
+		panel_Information.setLayout(null);
+		
+		JLabel label_9 = new JLabel("Previous Information");
+		label_9.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		label_9.setBounds(101, 11, 138, 14);
+		panel_Information.add(label_9);
+		
+		textField = new JTextField();
+		textField.setColumns(10);
+		textField.setBounds(80, 47, 86, 20);
+		panel_Information.add(textField);
+		
+		JLabel label_10 = new JLabel("Cable Size:");
+		label_10.setBounds(10, 50, 69, 14);
+		panel_Information.add(label_10);
+		
+		JButton button = new JButton("Salve");
+		button.setBounds(272, 46, 89, 23);
+		panel_Information.add(button);
+		
+		JPanel panel_Show = new JPanel();
+		panel_Show.setBounds(391, 11, 583, 456);
+		panel.add(panel_Show);
+		
+		String[] colunas = new String[]{"Name","Voltage[V]","Type","Cable[mm²]","Circuit Current[A]","Isolation","Circuit Length[m]"};
+		 
+		String[][] dados = new String[][]{
+		
+		  {"Cozinha","220","Power","4","11","PVC","15"},
+		 {"Maria","30","Feminino"}}
+		;
+		DefaultTableModel model = new DefaultTableModel(dados , colunas );
+		panel_Show.setLayout(null);
+		
+		table = new JTable();
+		table.setModel(model);
+		
+		
+		//panel_Show.add(table, BorderLayout.CENTER);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(0, 23, 583, 433);
+		//scrollPane.add(table);
+		scrollPane.setViewportView(table);
+		panel_Show.add(scrollPane);
+		
+		JLabel lblDe = new JLabel("Circuits Description");
+		lblDe.setBounds(218, 0, 104, 14);
+		panel_Show.add(lblDe);
+	}
+}

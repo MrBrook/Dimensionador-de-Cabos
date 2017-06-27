@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;br.com.GUI.Tela&apos; to &apos;PrincipalTela&apos;&#x0D;&#x0A;- Original project: &apos;FinalProject&apos;&#x0D;&#x0A;- Original element: &apos;br.com.GUI.Tela&apos;&#x0D;&#x0A;- Renamed element: &apos;br.com.GUI.PrincipalTela&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Tela&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;br.com.GUI{Tela.java[Tela" matchStrategy="1" name="PrincipalTela" qualified="false" references="true" similarDeclarations="false" stamp="1498000205980" textual="false" version="1.0"/>
+</session>

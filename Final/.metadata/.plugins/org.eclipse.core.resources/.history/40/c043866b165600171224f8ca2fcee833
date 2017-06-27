@@ -1,0 +1,200 @@
+package br.com.GUI;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JCheckBox;
+import javax.swing.JSpinner;
+import javax.swing.JList;
+import java.awt.Choice;
+import javax.swing.JTextPane;
+import java.awt.Label;
+import java.awt.Component;
+import javax.swing.Box;
+import javax.swing.JTable;
+import javax.swing.JRadioButton;
+import java.awt.Button;
+
+public class SubTela extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+	private JTable table;
+	private JTextField textField_1;
+	private JTextField txtProject;
+	private JTextField textField_3;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					SubTela frame = new SubTela();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public SubTela() {
+		setTitle("New Circuit Project");
+		setResizable(false);
+		setAutoRequestFocus(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 386, 531);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		JPanel panel = new JPanel();
+		contentPane.add(panel, BorderLayout.CENTER);
+		panel.setLayout(null);
+		
+		textField = new JTextField();
+		textField.setBounds(66, 64, 267, 20);
+		panel.add(textField);
+		textField.setColumns(10);
+		
+		JLabel lVoltage = new JLabel("Voltage:");
+		lVoltage.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		lVoltage.setBounds(10, 223, 54, 19);
+		panel.add(lVoltage);
+		
+		Choice choice = new Choice();
+		choice.setBounds(66, 222, 61, 20);
+		choice.add("127 V");
+		choice.add("220 V");
+		panel.add(choice);
+		
+		Label label = new Label("Method of Installation: ");
+		label.setFont(new Font("Dialog", Font.PLAIN, 11));
+		label.setBounds(10, 250, 126, 22);
+		panel.add(label);
+		
+		Label lMaterial = new Label("Material:");
+		lMaterial.setFont(new Font("Dialog", Font.PLAIN, 11));
+		lMaterial.setBounds(159, 220, 54, 22);
+		panel.add(lMaterial);
+		
+		Choice choice_1 = new Choice();
+		choice_1.setBounds(219, 220, 94, 20);
+		choice_1.add("Copper (Cu)");
+		choice_1.add("Aluminum (Al)");
+		panel.add(choice_1);
+		
+		Choice choice_2 = new Choice();
+		choice_2.setBounds(143, 252, 52, 20);
+		choice_2.add("A1");
+		choice_2.add("A2");
+		choice_2.add("B1");
+		choice_2.add("B2");
+		choice_2.add("C");
+		choice_2.add("D");
+		choice_2.add("E");
+		choice_2.add("F");
+		choice_2.add("G");
+		panel.add(choice_2);
+		
+		table = new JTable();
+		table.setBounds(34, 139, 37, -18);
+		panel.add(table);
+		
+		JLabel lblNewLabel_2 = new JLabel("__________________________________________________");
+		lblNewLabel_2.setBounds(10, 298, 325, 14);
+		panel.add(lblNewLabel_2);
+		
+		JLabel lblPower = new JLabel("Power");
+		lblPower.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblPower.setBounds(141, 323, 54, 22);
+		panel.add(lblPower);
+		
+		JLabel lPower = new JLabel("Power:");
+		lPower.setBounds(10, 356, 46, 14);
+		panel.add(lPower);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(66, 353, 105, 20);
+		panel.add(textField_1);
+		textField_1.setColumns(10);
+		
+		JLabel label_2 = new JLabel("___________________________________________________");
+		label_2.setBounds(10, 95, 325, 14);
+		panel.add(label_2);
+		
+		JLabel lblProject = new JLabel("Project:");
+		lblProject.setBounds(10, 38, 46, 14);
+		panel.add(lblProject);
+		
+		txtProject = new JTextField();
+		txtProject.setEditable(false);
+		txtProject.setText("Project \u256D(\u0E51\u00AF\u0434\u00AF\u0E51)\u256E ");
+		txtProject.setBounds(66, 35, 267, 20);
+		panel.add(txtProject);
+		txtProject.setColumns(10);
+		
+		JLabel lblName = new JLabel("Name:");
+		lblName.setBounds(10, 67, 46, 14);
+		panel.add(lblName);
+		
+		JLabel lblCircuit = new JLabel("Circuit");
+		lblCircuit.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblCircuit.setBounds(149, 9, 46, 14);
+		panel.add(lblCircuit);
+		
+		JLabel lblPf = new JLabel("PF:");
+		lblPf.setBounds(201, 356, 20, 14);
+		panel.add(lblPf);
+		
+		textField_3 = new JTextField();
+		textField_3.setBounds(227, 353, 86, 20);
+		panel.add(textField_3);
+		textField_3.setColumns(10);
+		
+		JLabel lblUse = new JLabel("Use");
+		lblUse.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblUse.setBounds(149, 120, 46, 14);
+		panel.add(lblUse);
+		
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("Power");
+		rdbtnNewRadioButton.setBounds(62, 150, 109, 23);
+		panel.add(rdbtnNewRadioButton);
+		
+		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Lighting");
+		rdbtnNewRadioButton_1.setBounds(224, 150, 109, 23);
+		panel.add(rdbtnNewRadioButton_1);
+		
+		JLabel label_3 = new JLabel("___________________________________________________");
+		label_3.setBounds(10, 187, 325, 14);
+		panel.add(label_3);
+		
+		JLabel lConductorScheme = new JLabel("Conductor scheme:");
+		lConductorScheme.setBounds(10, 391, 105, 14);
+		panel.add(lConductorScheme);
+		
+		Choice choice_3 = new Choice();
+		choice_3.setBounds(126, 385, 187, 20);
+		panel.add(choice_3);
+		
+		Button bFinish = new Button("Finish");
+		bFinish.setBounds(201, 460, 70, 22);
+		panel.add(bFinish);
+		
+		Button bCancel = new Button("Cancel");
+		bCancel.setBounds(101, 460, 70, 22);
+		panel.add(bCancel);
+	}
+}
